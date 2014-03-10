@@ -74,7 +74,7 @@ clean: ronnclean doc-clean uninstall
 	node cli.js cache clean
 
 uninstall:
-	node cli.js rm npm -g -f
+	node cli.js rm nw-npm -g -f
 
 doc: $(mandocs) $(htmldocs)
 
