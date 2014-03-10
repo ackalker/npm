@@ -27,7 +27,6 @@
   },
   "directories": {
     "doc": "./doc",
-    "man": "./man",
     "lib": "./lib",
     "bin": "./bin"
   },
