@@ -1,6 +1,6 @@
 {
   "version": "1.4.4",
-  "name": "npm",
+  "name": "nw-npm",
   "publishConfig": {
     "proprietary-attribs": false
   },
