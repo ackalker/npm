@@ -80,6 +80,20 @@ if (conf.usage && npm.command !== "help") {
 conf._exit = true
 npm.load(conf, function (er) {
   if (er) return errorHandler(er)
+
+  // Disable some commands, advise to use `npm` instead.
+  switch (npm.command) {
+    case "help":
+      return errorHandler(new Error(
+        "nw-npm doesn't support this command, use npm instead"), true)
+  }
+
+  // Disable some config options, advise to use `npm` instead
+  if (conf.global) {
+    return errorHandler(new Error(
+      "nw-npm doesn't support this option, use npm instead"), true)
+  }
+
   npm.commands[npm.command](npm.argv, errorHandler)
 })
 
